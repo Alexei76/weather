@@ -15,7 +15,7 @@ function renderCity(data) {
 
     cityContainer.append(cityTemp)
 
-    cityTemp.innerText = Math.round(parseFloat(data.main.temp)) ;
+    cityTemp.innerText = ` ${Math.round(parseFloat(data.main.temp))} ‎°C ` ;
 
     container.append(cityContainer);
 }
