@@ -1,1 +1,1 @@
-console.log('This is about page...')
+import  './date.js';
