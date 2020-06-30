@@ -9,7 +9,8 @@ module.exports = {
         index: './src/js/index.js',
         shared: './src/js/shared.js',
         cities: './src/js/cities.js',
-        about: './src/js/about.js'
+        about: './src/js/about.js',
+        forecast: './src/js/forecast.js'
     },
     output: {
         path: path.resolve(__dirname, 'build'),
