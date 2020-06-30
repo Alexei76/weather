@@ -1,5 +1,6 @@
 import { cities } from '../data/cityPhoto.js';
 import { getWeatherByCity } from './api';
+import  './date.js';
 
 
 function renderSelectedCity(cityKey) {
