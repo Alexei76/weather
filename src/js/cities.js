@@ -13,7 +13,7 @@ function renderCity(data) {
     cityTemp.classList.add('city_temp');
 
     cityContainer.innerText = ` ${data.name} `;
-    if(data.name === ny ){cityContainer.innerText = {} };
+    
 
     cityContainer.append(cityTemp)
 
