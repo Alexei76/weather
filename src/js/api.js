@@ -1,4 +1,4 @@
-const API_KEY = '0ffd416aff3105ed18298e35a8ffaf0c';
+const API_KEY = '10596381ff4bbaf68c11b7be4338d315';
 
 export function getWeatherByCity(city) {
     return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&&appid=${API_KEY}`).then(rsp => rsp.json())
