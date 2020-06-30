@@ -8,6 +8,9 @@
     position: fixed;
     width: 100%;
     z-index: 3;
+    display: flex; 
+    justify-content:space-between; 
+    align-items: center;
 }
 main {
     width: 100%;
