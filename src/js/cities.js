@@ -11,7 +11,7 @@ function renderCity(data) {
     const cityTemp = document.createElement('span');
     cityTemp.classList.add('city_temp');
 
-    cityContainer.innerText = ` ${data.name} :`;
+    cityContainer.innerText = ` ${data.name} `;
 
     cityContainer.append(cityTemp)
 
