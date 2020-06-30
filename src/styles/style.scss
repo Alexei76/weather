@@ -35,6 +35,13 @@ main {
     height: 70vh;
     background-color: #fff;
     position: absolute;}
+    .cities-list{width: 30%;
+        background: grey;}
+    .city_container{width: 100%;
+        padding: 4% 5%;
+        border: 1px solid black;
+        text-align: left;}
+    .city_temp{float:right;}
 
 .locations {
     height: 70vh;
