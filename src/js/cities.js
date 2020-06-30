@@ -5,6 +5,7 @@ import { cities } from '../data/cityPhoto';
 function renderCity(data) {
     const container = document.querySelector('.cities-list');
     const cityContainer = document.createElement('div')
+    cityContainer.classList.add('city_container');
     const cityName = document.createElement('span');
     cityContainer.innerText = data.main.temp;
     cityContainer.append(cityName)
