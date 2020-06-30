@@ -15,7 +15,7 @@ function renderCity(data) {
 
     cityContainer.append(cityTemp)
 
-    cityTemp.innerText =Math.round(parseFloat(data.main.temp)-273.15) ;
+    cityTemp.innerText = Math.round(parseFloat(data.main.temp)) ;
 
     container.append(cityContainer);
 }
