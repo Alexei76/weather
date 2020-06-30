@@ -21,3 +21,9 @@ function renderCity(data) {
 }
 
 let arrayOfPromises = [];
+
+for(let city in cities) {
+    arrayOfPromises.push(getWeatherByCity(cities[city].name))
+}
+
+Promise.all(arrayOfPromises).then(data => data.map(item => renderCity(item)))
