@@ -23,8 +23,9 @@ main {
     .cities-list{width: 30%;
         background: grey;}
     .city_container{width: 100%;
-        padding: 4% 5%;
-        border: 1px solid black;
+        padding: 4% 5%;background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+        border: 1px solid grey;
         text-align: left;}
     .city_temp{float:right;}
 
