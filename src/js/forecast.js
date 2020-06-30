@@ -1,1 +1,1 @@
-import  './date.js';
+console.log('works')
