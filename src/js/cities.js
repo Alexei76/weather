@@ -15,7 +15,7 @@ function renderCity(data) {
 
     cityContainer.append(cityTemp)
 
-    cityTemp.innerText = data.main.temp;
+    cityTemp.innerText =` ${data.main.temp} ‎°C ` ;
 
     container.append(cityContainer);
 }
