@@ -57,6 +57,11 @@ module.exports = {
             filename: 'list.html',
             template: '!!ejs-webpack-loader!./list.ejs',
             chunks: ['shared','cities']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'forecast.html',
+            template: '!!ejs-webpack-loader!./forecast.ejs',
+            chunks: ['shared','forecast']
         })
     ],
     devServer: {
