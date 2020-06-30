@@ -1,3 +1,7 @@
+import { getWeatherByCity } from './api';
+import { cities } from '../data/cityPhoto';
+
+
 function renderCity(data) {
     const container = document.querySelector('.cities-list');
 
@@ -7,7 +11,7 @@ function renderCity(data) {
     const cityTemp = document.createElement('span');
     cityTemp.classList.add('city_temp');
 
-    cityContainer.innerText = `: ${data.name} `;
+    cityContainer.innerText = ` ${data.name} :`;
 
     cityContainer.append(cityTemp)
 
@@ -17,9 +21,3 @@ function renderCity(data) {
 }
 
 let arrayOfPromises = [];
-
-for(let city in cities) {
-    arrayOfPromises.push(getWeatherByCity(cities[city].name))
-}
-
-Promise.all(arrayOfPromises).then(data => data.map(item => renderCity(item)))
