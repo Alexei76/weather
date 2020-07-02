@@ -63,7 +63,7 @@ module.exports = {
             template: '!!ejs-webpack-loader!./forecast.ejs',
             chunks: ['shared','forecast']
         })
-    ],
+    ],devtool: '',
     devServer: {
         contentBase: path.resolve(__dirname, 'build'),
         compress: true,
