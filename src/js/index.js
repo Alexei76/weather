@@ -38,7 +38,7 @@ function createCityDropdown(cities) {
     })
     target.append(select);
 }
-function renderForecast(result[day]); {
+function renderForecast(result); {
     const {name, main} = data;
     const container = document.createElement('div');
     let target = document.querySelector('.innerpage');
@@ -76,7 +76,7 @@ function renderCityInfoBox(data) {
 }
 
 createCityDropdown(cities);
-renderForecast(result[day]);
+renderForecast(result);
 
 
 const selectedCity = localStorage.getItem('selectedCity');
@@ -96,7 +96,7 @@ if(selectedCity) {
 
     }).then(result => {
         for(let day in result) {
-            renderForecast(result[day])
+            renderForecast(result)
         }
     })
 
