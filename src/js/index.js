@@ -65,6 +65,23 @@ const selectedCity = localStorage.getItem('selectedCity');
 
 
 if(selectedCity) {
+    getForecast(cities[selectedCity].name).then(data => {
+
+        return data.list.reduce((accumulator, item) => {
+            const dateKey = new Date(item.dt_txt).getDate();
+            if(!accumulator[dateKey]) {
+                accumulator[dateKey] = [];
+            }
+            accumulator[dateKey].push(item);
+            return accumulator;
+        }, {})
+
+    }).then(result => {
+        for(let day in result) {
+            console.log(result[day])
+        }
+    })
+
     let selectedCityElement = document.getElementById(selectedCity)
     if(selectedCityElement){
         selectedCityElement.selected = true
