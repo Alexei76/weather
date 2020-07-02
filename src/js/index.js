@@ -1,5 +1,5 @@
 import { cities } from '../data/cityPhoto.js';
-import { getWeatherByCity } from './api';
+import { getWeatherByCity, getForecast } from './api';
 import  './date.js';
 
 
