@@ -38,7 +38,24 @@ function createCityDropdown(cities) {
     })
     target.append(select);
 }
+function renderForecast(result[day]); {
+    const {name, main} = data;
+    const container = document.createElement('div');
+    let target = document.querySelector('.innerpage');
 
+    container.classList.add('city-info-box');
+
+    const cityName = document.createElement('div');
+    cityName.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`
+
+    const celsius = document.createElement('span')
+    celsius.innerHTML = '&#x2103;'
+
+    
+    cityName.append(celsius)
+    container.append(cityName)
+    target.append(container);
+}
 function renderCityInfoBox(data) {
     const {name, main} = data;
     const container = document.createElement('div');
@@ -59,6 +76,7 @@ function renderCityInfoBox(data) {
 }
 
 createCityDropdown(cities);
+renderForecast(result[day]);
 
 
 const selectedCity = localStorage.getItem('selectedCity');
@@ -78,7 +96,7 @@ if(selectedCity) {
 
     }).then(result => {
         for(let day in result) {
-            console.log(result[day])
+            renderForecast(result[day])
         }
     })
 
