@@ -96,7 +96,7 @@ if(selectedCity) {
 
     }).then(result => {
         for(let day in result) {
-            renderForecast(result)
+            renderForecast(result[day])
         }
     })
 
