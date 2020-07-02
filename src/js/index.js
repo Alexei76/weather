@@ -43,7 +43,7 @@ function renderForecast(result); {
     const container = document.createElement('div');
     let target = document.querySelector('.innerpage');
 
-    container.classList.add('city-info-box');
+    container.classList.add('forecast-info-box');
 
     const cityName = document.createElement('div');
     cityName.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`
