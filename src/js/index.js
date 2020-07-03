@@ -40,8 +40,8 @@ function createCityDropdown(cities) {
 }
 
 function renderCityInfoBox(data) {
-    const {name, main} = data;
-    const {sys} = data;
+    const {name, main, sys} = data;
+  
     
    
    
