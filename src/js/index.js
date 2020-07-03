@@ -41,8 +41,9 @@ function createCityDropdown(cities) {
 
 function renderCityInfoBox(data) {
     const {name, main} = data;
+   
     let target = document.querySelector('.locations');
-    
+
     const container = document.createElement('div');
     container.classList.add('city-info-box');
 
@@ -52,9 +53,13 @@ function renderCityInfoBox(data) {
     const celsius = document.createElement('span')
     celsius.innerHTML = '&#x2103;'
 
+    const countryName = document.createElement('div');
+    countryName.innerText = `${name}: ${country}`
+
     
     cityName.append(celsius)
     container.append(cityName)
+    container.append(countryName)
     target.append(container);
 }
 
