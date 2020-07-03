@@ -40,7 +40,7 @@ function createCityDropdown(cities) {
 }
 
 function renderCityInfoBox(data) {
-    const {name, main, sys} = data;
+    const {name, main, sys, weather} = data;
   
     
    
@@ -59,10 +59,14 @@ function renderCityInfoBox(data) {
     const countryName = document.createElement('div');
     countryName.innerText = `${sys.country}`;
 
+    const weatherStatus = document.createElement('div');
+    weatherStatus.innerText = `${weather.icon}`;
+
     
     cityName.append(celsius)
     container.append(cityName)
     container.append(countryName)
+    container.append(weatherStatus)
     target.append(container);
 }
 
