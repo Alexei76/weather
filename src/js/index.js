@@ -56,7 +56,7 @@ function renderCityInfoBox(data) {
     celsius.innerHTML = '&#x2103;'
 
     const countryName = document.createElement('div');
-    countryName.innerText = `${name}: ${country}`
+    countryName.innerText = '${country}';
 
     
     cityName.append(celsius)
