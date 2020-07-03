@@ -79,10 +79,9 @@ if(selectedCity) {
 
     }).then(result => {
         for(let day in result) {
-            result[day].render(item) => {}
+            console.log(result[day])
         }
     })
-
     let selectedCityElement = document.getElementById(selectedCity)
     if(selectedCityElement){
         selectedCityElement.selected = true
