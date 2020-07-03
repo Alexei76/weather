@@ -43,7 +43,9 @@ function renderCityInfoBox(data) {
     const {name, main, sys, icon} = data;
   
     
-   
+    let locationIcon = document.querySelector('.weather-icon');
+    const {icon} = data.weather[0];
+    locationIcon.innerHTML = <img src="icons/${icon}.png">;
    
     let target = document.querySelector('.locations');
 
