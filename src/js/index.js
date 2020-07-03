@@ -45,7 +45,7 @@ function renderCityInfoBox(data) {
     
     let locationIcon = document.querySelector('.weather-icon');
     const {icon} = data.weather[0];
-    locationIcon.innerHTML = <img src="icons/${icon}.png">;
+    locationIcon.innerHTML = `${icon}`;
    
     let target = document.querySelector('.locations');
 
@@ -61,9 +61,7 @@ function renderCityInfoBox(data) {
     const countryName = document.createElement('div');
     countryName.innerText = `${sys.country}`;
 
-    const weatherStatus = document.createElement('div');
-    weatherStatus.innerText = `${icon}`;
-
+   
     
     cityName.append(celsius)
     container.append(cityName)
