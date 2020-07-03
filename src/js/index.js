@@ -39,13 +39,21 @@ function createCityDropdown(cities) {
     target.append(select);
 }
 
+
+
+
 function renderCityInfoBox(data) {
-    const {name, main, sys, icon} = data;
-  
+    const {name, main, sys} = data;
     
-    let locationIcon = document.querySelector('.weather-icon');
-    const {icon} = data.weather[0];
-    locationIcon.innerHTML = `${icon}`;
+let ico = document.querySelector('.weather-icon') 
+
+
+let tempvariable = data['weather'][0]['icon'];
+
+
+ico.innerHTML = "http://openweathermap.org/img/w/" +tempvariable+ ".png' alt='Icon depicting current weather.'>"
+  
+
    
     let target = document.querySelector('.locations');
 
@@ -66,7 +74,7 @@ function renderCityInfoBox(data) {
     cityName.append(celsius)
     container.append(cityName)
     container.append(countryName)
-    container.append(weatherStatus)
+    
     target.append(container);
 }
 
