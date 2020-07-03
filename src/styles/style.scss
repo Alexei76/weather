@@ -87,8 +87,9 @@ list-style: none;}
 .navigation ul li {padding: 2px;}
 .navigation ul li a {color: #000;}
 .navigation ul li.active {
-    border: 1px solid grey;
-    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #d6d5d5;
+    border-radius: 4px;
 }
 footer {
     display: flex;
