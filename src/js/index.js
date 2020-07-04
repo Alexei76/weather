@@ -47,7 +47,7 @@ function renderCast(data){
     const wrapper = document.createElement('div');
 
     const foreCast = document.createElement('div');
-    foreCast.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`;
+    foreCast.innerText = `${dt}: ${dt_txt}`;
 
     container.append(foreCast)
 
