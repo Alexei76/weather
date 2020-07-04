@@ -43,7 +43,17 @@ function createCityDropdown(cities) {
 function renderCast(data){
     const {dt,dt_txt} = data;
 
-    let target = document.querySelector('.locations');}
+    let target = document.querySelector('.forecast');
+    const wrapper = document.createElement('div');
+
+    const foreCast = document.createElement('div');
+    foreCast.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`;
+
+    container.append(foreCast)
+
+    target.append(wrapper);
+
+}
 
 function renderCityInfoBox(data) {
     const {name, main, sys, weather} = data;
