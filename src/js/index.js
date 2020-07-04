@@ -73,10 +73,11 @@ function renderCityInfoBox(data) {
    
     
     cityName.append(celsius)
-    container.append(imgDiv)
+    
     
     container.append(cityName)
     container.append(countryName)
+    container.append(imgDiv)
     
     target.append(container);
 }
