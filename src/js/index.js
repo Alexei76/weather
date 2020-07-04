@@ -40,7 +40,10 @@ function createCityDropdown(cities) {
 }
 
 
+function renderCast(data){
+    const {dt,dt_txt} = data;
 
+    let target = document.querySelector('.locations');}
 
 function renderCityInfoBox(data) {
     const {name, main, sys, weather} = data;
