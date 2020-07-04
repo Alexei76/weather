@@ -67,7 +67,7 @@ function renderCityInfoBox(data) {
     imgDiv.classList.add = ('weathericon');
 
    const imgPicture = document.createElement('img');
-   imgPicture.setAttribute('src', ${sys.country);
+   imgPicture.setAttribute('src', sys.country);
    imgDiv.append(imgPicture);
 
    
