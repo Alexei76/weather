@@ -67,7 +67,7 @@ function renderCityInfoBox(data) {
     imgDiv.classList.add = ('weathericon');
 
     const wico = document.createElement('span');
-    wico.innerHTML = (weather.icon);
+    wico.innerHTML = (weather.id);
     imgDiv.append(wico);
 
   
