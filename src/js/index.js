@@ -45,13 +45,7 @@ function createCityDropdown(cities) {
 function renderCityInfoBox(data) {
     const {name, main, sys} = data;
     
-let ico = document.querySelector('.weather-icon') 
 
-
-let tempvariable = data['weather'][0]['icon'];
-
-
-ico.innerHTML = "http://openweathermap.org/img/w/" +tempvariable+ ".png' alt='Icon depicting current weather.'>"
   
 
    
