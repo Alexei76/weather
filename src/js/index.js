@@ -107,7 +107,7 @@ if(selectedCity) {
         for(let day in result) {
             console.log(result[day])
         }
-    })
+    }).then(data => renderCast(data))
     let selectedCityElement = document.getElementById(selectedCity)
     if(selectedCityElement){
         selectedCityElement.selected = true
