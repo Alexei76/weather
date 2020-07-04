@@ -43,7 +43,7 @@ function createCityDropdown(cities) {
 
 
 function renderCityInfoBox(data) {
-    const {name, main, sys} = data;
+    const {name, main, sys, weather} = data;
     
 
   
@@ -67,7 +67,7 @@ function renderCityInfoBox(data) {
     imgDiv.classList.add = ('weathericon');
 
    const imgPicture = document.createElement('img');
-   imgPicture.setAttribute('src', sys.country);
+   imgPicture.setAttribute('src', weather.icon);
    imgDiv.append(imgPicture);
 
    
