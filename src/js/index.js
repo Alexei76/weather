@@ -45,6 +45,7 @@ function renderCast(data){
 
     let target = document.querySelector('.forecast');
     const wrapper = document.createElement('div');
+    wrapper.classList.add('forecast-info');
 
     const foreCast = document.createElement('div');
     foreCast.innerText = `${dt}: ${dt_txt}`;
