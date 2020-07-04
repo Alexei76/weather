@@ -44,6 +44,7 @@ function renderCast(data){
     const {dt,dt_txt} = data;
 
     let target = document.querySelector('.forecast');
+
     const wrapper = document.createElement('div');
     wrapper.classList.add('forecast-info');
 
@@ -121,7 +122,7 @@ if(selectedCity) {
         for(let day in result) {
             console.log(result[day])
         }
-    }).then(data => renderCast(data))
+    })
     let selectedCityElement = document.getElementById(selectedCity)
     if(selectedCityElement){
         selectedCityElement.selected = true
