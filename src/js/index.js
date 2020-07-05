@@ -44,16 +44,7 @@ function createCityDropdown(cities) {
 
 function renderForcastDay(item){
 
-    let nameOfCity = document.querySelector('.city');
-    nameOfCity.innerText = data.name;
-    let temperature = document.querySelector('.temperature');
-    temperature.innerText = "Temperature " + Math.floor(data.main.temp) + "°C";
-    let clouds = document.querySelector('.clouds');
-    let weatherDescription = document.querySelector('.weather-description');
-    weatherDescription.innerText = data.weather[0].description;
-    let sentece = weatherDescription.innerText;
-    let wind = document.querySelector('.wind-speed');
-    wind.innerText = "Wind: " + data.wind.speed + " m/s";
+ 
 
 
 
@@ -63,8 +54,14 @@ function renderForcastDay(item){
     const wrapper = document.createElement('div');
     wrapper.classList.add('forecast-info');
 
+
+    const nmCty = document.createElement('div');
+    nmCty.innerText = `${item.city}`;
+
     const foreCastfirst = document.createElement('div');
     foreCastfirst.innerText = `${item.dt}: ${item.dt_txt}`;
+
+    wrapper.append(nmCty)
 
     wrapper.append(foreCastfirst)
     target.append(wrapper);
