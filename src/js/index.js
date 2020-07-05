@@ -57,6 +57,20 @@ function renderCast(data){
 
 }
 
+function renderForcastDay(item){
+    let target = document.querySelector('.forecastcontainer');
+
+    const container = document.createElement('div');
+    container.classList.add('forecast-info');
+
+    const foreCastfirst = document.createElement('div');
+    foreCastfirst.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`;
+
+    container.append(foreCastfirst)
+    target.append(container);
+
+}
+
 function renderCityInfoBox(data) {
     const {name, main, sys, weather} = data;
     
@@ -113,7 +127,7 @@ getForecast(cities[selectedCity].name).then(data => {
               if(index === 0) return item;
               if((index +1) % 8 === 0) return item;
      })
-     }).then(result => result.map(item => console.log(item)))
+     }).then(result => result.map(item => renderForcastDay(item)))
    
 
 
