@@ -56,7 +56,7 @@ function renderForcastDay(item){
 
 
     const nmCty = document.createElement('div');
-    nmCty.innerText = `${item.city}`;
+    nmCty.innerText = `${item.name}`;
 
     const foreCastfirst = document.createElement('div');
     foreCastfirst.innerText = `${item.dt}: ${item.dt_txt}`;
