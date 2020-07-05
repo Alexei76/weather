@@ -40,22 +40,7 @@ function createCityDropdown(cities) {
 }
 
 
-function renderCast(data){
-    const {dt,dt_txt} = data;
 
-    let target = document.querySelector('.forecast');
-
-    const wrapper = document.createElement('div');
-    wrapper.classList.add('forecast-info');
-
-    const foreCast = document.createElement('div');
-    foreCast.innerText = `${dt}: ${dt_txt}`;
-
-    container.append(foreCast)
-
-    target.append(wrapper);
-
-}
 
 function renderForcastDay(item){
     let target = document.querySelector('.forecastcontainer');
@@ -64,7 +49,7 @@ function renderForcastDay(item){
     container.classList.add('forecast-info');
 
     const foreCastfirst = document.createElement('div');
-    foreCastfirst.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`;
+    foreCastfirst.innerText = `${dt}: ${dt_txt}`;
 
     container.append(foreCastfirst)
     target.append(container);
