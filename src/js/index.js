@@ -123,6 +123,13 @@ if(selectedCity) {
             console.log(result[day])
         }
     })
+
+
+
+
+
+
+    
     let selectedCityElement = document.getElementById(selectedCity)
     if(selectedCityElement){
         selectedCityElement.selected = true
