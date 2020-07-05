@@ -43,7 +43,7 @@ function createCityDropdown(cities) {
 
 
 function renderForcastDay(item){
-    const {dt, dt_txt} = data;
+   
     let target = document.querySelector('.forecastcontainer');
 
     const wrapper = document.createElement('div');
