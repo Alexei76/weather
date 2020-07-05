@@ -42,6 +42,55 @@ function createCityDropdown(cities) {
 
 
 
+
+function renderCityInfoBox(data) {
+    const {name, main, sys, weather} = data;
+    
+
+  
+
+   
+    let target = document.querySelector('.locations');
+
+    const container = document.createElement('div');
+    container.classList.add('city-info-box');
+
+    const cityName = document.createElement('div');
+    cityName.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`;
+
+    const celsius = document.createElement('span')
+    celsius.innerHTML = '&#x2103;'
+
+    const countryName = document.createElement('div');
+    countryName.innerText = `${sys.country}`;
+
+    const imgDiv = document.createElement('div');
+    imgDiv.classList.add = ('weathericon');
+
+    const wico = document.createElement('span');
+    wico.innerHTML = `${weather.icon}`;
+    imgDiv.append(wico);
+
+  
+
+   
+    
+    cityName.append(celsius)
+    
+    
+    container.append(cityName)
+    container.append(countryName)
+    container.append(imgDiv)
+    
+    target.append(container);
+}
+
+createCityDropdown(cities);
+
+
+
+const selectedCity = localStorage.getItem('selectedCity');
+
 function renderForcastDay(item){
 
  
@@ -128,53 +177,6 @@ function renderForcastDay(item){
 
 }
 
-function renderCityInfoBox(data) {
-    const {name, main, sys, weather} = data;
-    
-
-  
-
-   
-    let target = document.querySelector('.locations');
-
-    const container = document.createElement('div');
-    container.classList.add('city-info-box');
-
-    const cityName = document.createElement('div');
-    cityName.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`;
-
-    const celsius = document.createElement('span')
-    celsius.innerHTML = '&#x2103;'
-
-    const countryName = document.createElement('div');
-    countryName.innerText = `${sys.country}`;
-
-    const imgDiv = document.createElement('div');
-    imgDiv.classList.add = ('weathericon');
-
-    const wico = document.createElement('span');
-    wico.innerHTML = `${weather.icon}`;
-    imgDiv.append(wico);
-
-  
-
-   
-    
-    cityName.append(celsius)
-    
-    
-    container.append(cityName)
-    container.append(countryName)
-    container.append(imgDiv)
-    
-    target.append(container);
-}
-
-createCityDropdown(cities);
-
-
-
-const selectedCity = localStorage.getItem('selectedCity');
 
 
 if(selectedCity) {
