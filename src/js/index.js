@@ -123,7 +123,7 @@ function renderForcastDay(item){
     wrapper.append(cloudsWrap)
 
     wrapper.append(foreCastfirst)
-    wrapper.append(clouds)
+ 
     target.append(wrapper);
 
 }
