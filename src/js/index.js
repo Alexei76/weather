@@ -46,14 +46,14 @@ function renderForcastDay(item){
     const {dt, dt_txt} = data;
     let target = document.querySelector('.forecastcontainer');
 
-    const container = document.createElement('div');
-    container.classList.add('forecast-info');
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('forecast-info');
 
     const foreCastfirst = document.createElement('div');
     foreCastfirst.innerText = `${dt}: ${dt_txt}`;
 
-    container.append(foreCastfirst)
-    target.append(container);
+    wrapper.append(foreCastfirst)
+    target.append(wrapper);
 
 }
 
