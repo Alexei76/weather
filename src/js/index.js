@@ -40,22 +40,6 @@ function createCityDropdown(cities) {
 }
 
 
-getForecast(cities[selectedCity].name).then(data => {
-
-    return data.list.reduce((accumulator, item) => {
-        const dateKey = new Date(item.dt_txt).getDate();
-        if(!accumulator[dateKey]) {
-            accumulator[dateKey] = [];
-        }
-        accumulator[dateKey].push(item);
-        return accumulator;
-    }, {})
-
-}).then(result => {
-    for(let day in result) {
-        console.log(result[day])
-    }
-})
 
 //function renderForcastDay(item){
 
@@ -133,13 +117,32 @@ const selectedCity = localStorage.getItem('selectedCity');
 
 
 if(selectedCity) {
-getForecast(cities[selectedCity].name).then(data => {
+//getForecast(cities[selectedCity].name).then(data => {
 
-        return data.list.filter((item, index) => {
-              if(index === 0) return item;
-              if((index +1) % 8 === 0) return item;
-     })
-     }).then(result => result.map(item => renderForcastDay(item)))
+        //return data.list.filter((item, index) => {
+              //if(index === 0) return item;
+              //if((index +1) % 8 === 0) return item;
+     //})
+     //}).then(result => result.map(item => renderForcastDay(item)))
+
+
+     getForecast(cities[selectedCity].name).then(data => {
+
+        return data.list.reduce((accumulator, item) => {
+            const dateKey = new Date(item.dt_txt).getDate();
+            if(!accumulator[dateKey]) {
+                accumulator[dateKey] = [];
+            }
+            accumulator[dateKey].push(item);
+            return accumulator;
+        }, {})
+    
+    }).then(result => {
+        for(let day in result) {
+            console.log(result[day])
+        }
+    })
+    
    
 
 
