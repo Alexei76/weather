@@ -64,7 +64,7 @@ function renderForcastDay(item){
     cloudsWrap.innerText = item.weather[0].description;
 
     const clouds = document.createElement('img');
-    clouds.setAttribute('src', '');
+   
 
 
     for (let i = 500; i <= 504; i++) {
