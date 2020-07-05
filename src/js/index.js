@@ -60,8 +60,11 @@ function renderForcastDay(item){
     const foreCastfirst = document.createElement('div');
     foreCastfirst.innerText = `${item.dt_txt}`;
 
-    const clouds = document.createElement('div');
-    clouds.innerText = item.weather[0].description;
+    const cloudsWrap = document.createElement('div');
+    cloudsWrap.innerText = item.weather[0].description;
+
+    const clouds = document.createElement('img');
+    clouds.setAttribute('src', '');
 
 
     for (let i = 500; i <= 504; i++) {
@@ -116,8 +119,8 @@ function renderForcastDay(item){
         }
     }
 
-
-    
+    cloudsWrap.append(clouds)
+    wrapper.append(cloudsWrap)
 
     wrapper.append(foreCastfirst)
     wrapper.append(clouds)
