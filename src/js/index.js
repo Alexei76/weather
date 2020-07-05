@@ -55,13 +55,15 @@ function renderForcastDay(item){
     wrapper.classList.add('forecast-info');
 
 
-    const nmCty = document.createElement('div');
-    nmCty.innerText = item.name;
+   
 
     const foreCastfirst = document.createElement('div');
     foreCastfirst.innerText = `${item.dt}: ${item.dt_txt}`;
 
-    wrapper.append(nmCty)
+    const weatherDes = document.createElement('div');
+    weatherDes.innerText = item.weather[0].description;
+
+    wrapper.append(weatherDes)
 
     wrapper.append(foreCastfirst)
     target.append(wrapper);
