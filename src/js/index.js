@@ -58,14 +58,15 @@ function renderForcastDay(item){
    
 
     const foreCastfirst = document.createElement('div');
-    foreCastfirst.innerText = `${item.dt}: ${item.dt_txt}`;
+    foreCastfirst.innerText = `${item.dt_txt}`;
 
     const weatherDes = document.createElement('div');
     weatherDes.innerText = item.weather[0].description;
 
-    wrapper.append(weatherDes)
+    
 
     wrapper.append(foreCastfirst)
+    wrapper.append(weatherDes)
     target.append(wrapper);
 
 }
