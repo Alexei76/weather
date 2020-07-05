@@ -107,23 +107,25 @@ const selectedCity = localStorage.getItem('selectedCity');
 
 
 if(selectedCity) {
-    getForecast(cities[selectedCity].name).then(data =>{
+getForecast(cities[selectedCity].name).then(data => {
 
         return data.list.filter((item, index) => {
-              if(index ===0) return item;
+              if(index === 0) return item;
               if((index +1) % 8 === 0) return item;
+     })
      }).then(result => result.map(item => console.log(item)))
+   
 
 
 
 
 
-
-    ////let selectedCityElement = document.getElementById(selectedCity)
-    //if(selectedCityElement){
-       // selectedCityElement.selected = true
-        //renderSelectedCity(selectedCity);
+    
+    let selectedCityElement = document.getElementById(selectedCity)
+    if(selectedCityElement){
+        selectedCityElement.selected = true
+        renderSelectedCity(selectedCity);
     } 
-////} else {
-   // console.log('...simple flow');}
-
+} else {
+    console.log('...simple flow');
+}
