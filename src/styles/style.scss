@@ -78,7 +78,7 @@ main {
     left: 0;
 }
 
-.forecastcontainer{display:flex;}
+.forecastcontainer{display:flex;width:100%;min-height:200px;background-color:white;padding:5%;}
 .navigation ul {
    
 display: flex;
