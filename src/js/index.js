@@ -41,31 +41,32 @@ function createCityDropdown(cities) {
 
 
 
-//function renderForcastDay(item){
+
+function renderForcastDay(item){
 
  
 
 
 
    
-    //let target = document.querySelector('.forecastcontainer');
+    let target = document.querySelector('.forecastcontainer');
 
-    //const wrapper = document.createElement('div');
-    //wrapper.classList.add('forecast-info');
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('forecast-info');
 
 
-    //const nmCty = document.createElement('div');
-    //nmCty.innerText = item.name;
+    const nmCty = document.createElement('div');
+    nmCty.innerText = item.name;
 
-    //const foreCastfirst = document.createElement('div');
-    //foreCastfirst.innerText = `${item.dt}: ${item.dt_txt}`;
+    const foreCastfirst = document.createElement('div');
+    foreCastfirst.innerText = `${item.dt}: ${item.dt_txt}`;
 
-    //wrapper.append(nmCty)
+    wrapper.append(nmCty)
 
-    //wrapper.append(foreCastfirst)
-    ///target.append(wrapper);
+    wrapper.append(foreCastfirst)
+    target.append(wrapper);
 
-//}
+}
 
 function renderCityInfoBox(data) {
     const {name, main, sys, weather} = data;
@@ -117,32 +118,13 @@ const selectedCity = localStorage.getItem('selectedCity');
 
 
 if(selectedCity) {
-//getForecast(cities[selectedCity].name).then(data => {
+getForecast(cities[selectedCity].name).then(data => {
 
-        //return data.list.filter((item, index) => {
-              //if(index === 0) return item;
-              //if((index +1) % 8 === 0) return item;
-     //})
-     //}).then(result => result.map(item => renderForcastDay(item)))
-
-
-     getForecast(cities[selectedCity].name).then(data => {
-
-        return data.list.reduce((accumulator, item) => {
-            const dateKey = new Date(item.dt_txt).getDate();
-            if(!accumulator[dateKey]) {
-                accumulator[dateKey] = [];
-            }
-            accumulator[dateKey].push(item);
-            return accumulator;
-        }, {})
-    
-    }).then(result => {
-        for(let day in result) {
-            console.log(result[day])
-        }
-    })
-    
+        return data.list.filter((item, index) => {
+              if(index === 0) return item;
+              if((index +1) % 8 === 0) return item;
+     })
+     }).then(result => result.map(item => renderForcastDay(item)))
    
 
 
