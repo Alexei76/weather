@@ -60,8 +60,10 @@ function renderForcastDay(item){
     const foreCastfirst = document.createElement('div');
     foreCastfirst.innerText = `${item.dt_txt}`;
 
-    const weatherDes = document.createElement('div');
-    weatherDes.innerText = item.weather[0].description;
+    const clouds = document.createElement('div');
+    clouds.innerText = item.weather[0].description;
+
+
     for (let i = 500; i <= 504; i++) {
         if (item.weather[0].id === i) {
             clouds.setAttribute('src', 'http://openweathermap.org/img/wn/10d@2x.png');
@@ -118,7 +120,7 @@ function renderForcastDay(item){
     
 
     wrapper.append(foreCastfirst)
-    wrapper.append(weatherDes)
+    wrapper.append(clouds)
     target.append(wrapper);
 
 }
