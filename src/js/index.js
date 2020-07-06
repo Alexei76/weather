@@ -64,7 +64,9 @@ function renderCityInfoBox(data) {
     const countryName = document.createElement('div');
     countryName.innerText = `${sys.country}`;
 
-   
+    const imgDiv = document.createElement('div');
+    imgDiv.classList.add = ('weathericon');
+
     imgDiv.append(wico);
 
   
