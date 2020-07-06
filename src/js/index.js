@@ -93,7 +93,7 @@ const selectedCity = localStorage.getItem('selectedCity');
 
 function renderForcastDay(item){
 
-    const {dt_txt  } = item;
+    const {dt_txt, dt  } = item;
 
    
     let target = document.querySelector('.forecastcontainer');
@@ -107,7 +107,7 @@ function renderForcastDay(item){
    
 
     const foreCastfirst = document.createElement('div');
-    foreCastfirst.innerText = `${dt_txt}`;
+    foreCastfirst.innerText = `${dt}`;
 
     const cloudsWrap = document.createElement('div');
     cloudsWrap.innerText = item.weather[0].description;
