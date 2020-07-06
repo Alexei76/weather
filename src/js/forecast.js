@@ -11,7 +11,33 @@ function renderSelectedCity(cityKey) {
 }
 
 
+function createCityDropdown(cities) {
+    let select = document.createElement('select');
+    let target = document.querySelector('.locations2');
+    select.setAttribute('name', 'city-selector');
+    select.setAttribute('id', 'city-selector');
+    select.setAttribute('class', 'locations__select');
 
+    let emptyOption = document.createElement('option');
+    emptyOption.setAttribute('value', 'none');
+    emptyOption.innerText = '--select--';
+    select.append(emptyOption);
+    
+    for (const city in cities) {
+        let option = document.createElement('option');
+        option.setAttribute('value', city)
+        option.setAttribute('id', city)
+        option.innerText = cities[city].name;
+        select.append(option);
+    }
+    select.addEventListener('change', (event) => {
+        let cityKey = event.target.value;
+        renderSelectedCity(cityKey);
+        localStorage.setItem('selectedCity', cityKey);
+       
+    })
+    target.append(select);
+}
 
 
 
