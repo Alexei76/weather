@@ -12,7 +12,7 @@ function renderSelectedCity(cityKey) {
 
 
 function createCityDropdown(cities) {
-    //let select = document.createElement('select');
+    let select = document.createElement('select');
     let target = document.querySelector('.locations2');
     select.setAttribute('name', 'city-selector');
     select.setAttribute('id', 'city-selector');
@@ -36,7 +36,7 @@ function createCityDropdown(cities) {
         localStorage.setItem('selectedCity', cityKey);
        
     })
-    target.append(select);
+    //target.append(select);
 }
 
 
