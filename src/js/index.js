@@ -107,7 +107,7 @@ function renderForcastDay(item){
    
 
     const foreCastfirst = document.createElement('div');
-    foreCastfirst.innerText = `${dt}`;
+    foreCastfirst.innerText = `${dt_txt}`;
 
     const cloudsWrap = document.createElement('div');
     cloudsWrap.innerText = item.weather[0].description;
