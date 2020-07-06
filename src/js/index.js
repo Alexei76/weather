@@ -102,7 +102,7 @@ function renderForcastDay(item){
     wrapper.classList.add('forecast-info');
 
     const dtTemp = document.createElement('div');
-    dtTemp.innerText = ` ${Math.floor(item.main.temp)} ‎°C ` ;
+    dtTemp.innerText = ` ${Math.floor((item.main.temp)/10)} ‎°C ` ;
     
    
 
