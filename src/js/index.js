@@ -65,8 +65,7 @@ function renderCityInfoBox(data) {
     countryName.innerText = `${sys.country}`;
 
    
-
-  
+    imgDiv.append(wico);
 
   
 
