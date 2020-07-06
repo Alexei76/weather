@@ -101,7 +101,7 @@ function renderForcastDay(item){
     const wrapper = document.createElement('div');
     wrapper.classList.add('forecast-info');
 
-    let dtTemp = document.createElement('div');
+    const dtTemp = document.createElement('div');
     dtTemp.innerText = `Temperature: ${Math.floor(item.main.temp)} ${"°C"}`;
    
 
@@ -166,6 +166,7 @@ function renderForcastDay(item){
             clouds.setAttribute('src', 'http://openweathermap.org/img/wn/11d@2x.png');
         }
     }
+    wrapper.append(dtTemp)
     wrapper.append(foreCastfirst)
     cloudsWrap.append(clouds)
     wrapper.append(cloudsWrap)
