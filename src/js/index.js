@@ -102,12 +102,12 @@ function renderForcastDay(item){
     wrapper.classList.add('forecast-info');
 
     const dtTemp = document.createElement('div');
-    dtTemp.innerText = ` ${Math.round(parseFloat(item.main.temp))} ‎°C ` ;
+    dtTemp.innerText = ` ${Math.round(parseFloat(item.main.temp / 10))} ‎°C ` ;
     
    
 
     const foreCastfirst = document.createElement('div');
-    foreCastfirst.innerText = `${dt_txt}`;
+    foreCastfirst.innerText = `${dt}`;
 
     const cloudsWrap = document.createElement('div');
     cloudsWrap.innerText = item.weather[0].description;
