@@ -64,12 +64,9 @@ function renderCityInfoBox(data) {
     const countryName = document.createElement('div');
     countryName.innerText = `${sys.country}`;
 
-    const imgDiv = document.createElement('div');
-    imgDiv.classList.add = ('weathericon');
+   
 
-    const wico = document.createElement('span');
-    wico.innerHTML = `${weather.icon}`;
-    imgDiv.append(wico);
+   
 
   
 
@@ -80,7 +77,7 @@ function renderCityInfoBox(data) {
     
     container.append(cityName)
     container.append(countryName)
-    container.append(imgDiv)
+
     
     target.append(container);
 }
