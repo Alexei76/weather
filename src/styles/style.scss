@@ -35,14 +35,18 @@ main {
     #current_date{position: absolute;
         left: 18%;}
 
+
+
+
+.locations2 {
+            height: 70vh;
+            background-color: #eee;
+            position: relative;}
 .locations {
     height: 70vh;
     background-color: #eee;
     position: relative;
-    .locations2 {
-        height: 70vh;
-        background-color: #eee;
-        position: relative;
+    
 
     img {
         width: 100%;
@@ -155,13 +159,4 @@ footer {position:absolute;width:100%;bottom:0;
     .header .menu-btn:hover {
     background-color:#fff;
     }
-    
-   
-    
-     
-        
-        
-        
-        
-        
     
