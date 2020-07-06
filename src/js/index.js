@@ -104,10 +104,17 @@ function renderForcastDay(item){
     const dtTemp = document.createElement('div');
     dtTemp.innerText = ` ${Math.floor((item.main.temp)/10)} ‎°C ` ;
     
-   
+    let foreCastfirst = document.createElement('div');
+                    let day = new Date(item.dt_txt).getDate();
+                    let month = new Date(item.dt_txt).getMonth() + 1;
+                    let year = new Date(item.dt_txt).getFullYear();
+                    let mm = month < 10 ? '0' + month : month;
+                    let dd = day < 10 ? '0' + day : day;
+                    foreCastfirst.innerText = dd + "." + mm + "." + year;
 
-    const foreCastfirst = document.createElement('div');
-    foreCastfirst.innerText = `${dt}`;
+
+
+   
 
     const cloudsWrap = document.createElement('div');
     cloudsWrap.innerText = item.weather[0].description;
