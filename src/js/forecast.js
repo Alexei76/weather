@@ -50,7 +50,7 @@ function renderCityInfoBox(data) {
   
 
    
-    let target = document.querySelector('.locations');
+    let target = document.querySelector('.locations2');
 
     const container = document.createElement('div');
     container.classList.add('city-info-box');
