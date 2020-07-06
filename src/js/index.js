@@ -95,8 +95,6 @@ function renderForcastDay(item){
 
     const {dt_txt  } = item;
 
-
-    
    
     let target = document.querySelector('.forecastcontainer');
 
@@ -167,11 +165,11 @@ function renderForcastDay(item){
             clouds.setAttribute('src', 'http://openweathermap.org/img/wn/11d@2x.png');
         }
     }
-
+    wrapper.append(foreCastfirst)
     cloudsWrap.append(clouds)
     wrapper.append(cloudsWrap)
 
-    wrapper.append(foreCastfirst)
+    
     wrapper.append(clouds)
     target.append(wrapper);
 
