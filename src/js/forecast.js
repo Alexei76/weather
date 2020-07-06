@@ -13,10 +13,10 @@ function renderSelectedCity(cityKey) {
 
 function createCityDropdown(cities) {
     //let select = document.createElement('select');
-    //let target = document.querySelector('.locations2');
-    //select.setAttribute('name', 'city-selector');
-    //select.setAttribute('id', 'city-selector');
-    //select.setAttribute('class', 'locations__select');
+    let target = document.querySelector('.locations2');
+    select.setAttribute('name', 'city-selector');
+    select.setAttribute('id', 'city-selector');
+    select.setAttribute('class', 'locations__select');
 
     let emptyOption = document.createElement('option');
     emptyOption.setAttribute('value', 'none');
