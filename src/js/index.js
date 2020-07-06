@@ -96,8 +96,7 @@ function renderForcastDay(item){
     const {dt_txt  } = item;
 
 
-    let initTime = new Date(dt_txt).getHours();
-    if (initTime === 12)
+    
    
     let target = document.querySelector('.forecastcontainer');
 
