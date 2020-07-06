@@ -79,8 +79,12 @@ main {
 }
 
 .forecastcontainer{display:flex;width:100%;min-height:15%;padding:5%;}
-.forecast-info{width:15%;margin-right:2%;padding:1%;background-color: rgba(255,255,255,0.8);
- box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.3);}
+.forecast-info{text-align: center;
+    width: 15%;
+    margin-right: 2%;
+    padding: 1%;
+    background-color: rgba(255,255,255,0.88);
+    box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.3);}
 .navigation ul {
    
 display: flex;
@@ -97,7 +101,7 @@ footer {position:absolute;width:100%;bottom:0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 35vh;
 }
 
 .city-info-box {
