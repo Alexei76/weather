@@ -1,7 +1,6 @@
-
-import  './date.js';
+import { cities } from '../data/cityPhoto.js';
 import { getWeatherByCity, getForecast } from './api';
-
+import  './date.js';
 
 
 function renderSelectedCity(cityKey) {
@@ -11,6 +10,83 @@ function renderSelectedCity(cityKey) {
     getWeatherByCity(cities[cityKey].name).then(data => renderCityInfoBox(data))
 }
 
+
+function createCityDropdown(cities) {
+    let select = document.createElement('select');
+    let target = document.querySelector('.locations');
+    select.setAttribute('name', 'city-selector');
+    select.setAttribute('id', 'city-selector');
+    select.setAttribute('class', 'locations__select');
+
+    let emptyOption = document.createElement('option');
+    emptyOption.setAttribute('value', 'none');
+    emptyOption.innerText = '--select--';
+    select.append(emptyOption);
+    
+    for (const city in cities) {
+        let option = document.createElement('option');
+        option.setAttribute('value', city)
+        option.setAttribute('id', city)
+        option.innerText = cities[city].name;
+        select.append(option);
+    }
+    select.addEventListener('change', (event) => {
+        let cityKey = event.target.value;
+        renderSelectedCity(cityKey);
+        localStorage.setItem('selectedCity', cityKey);
+       
+    })
+    target.append(select);
+}
+
+
+
+
+
+function renderCityInfoBox(data) {
+    const {name, main, sys, weather} = data;
+    
+
+  
+
+   
+    let target = document.querySelector('.locations');
+
+    const container = document.createElement('div');
+    container.classList.add('city-info-box');
+
+    const cityName = document.createElement('h1');
+    cityName.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`;
+
+    const celsius = document.createElement('span')
+    celsius.innerHTML = '&#x2103;'
+
+    const countryName = document.createElement('div');
+    countryName.innerText = `${sys.country}`;
+
+   
+
+   
+
+  
+
+   
+    
+    cityName.append(celsius)
+    
+    
+    container.append(cityName)
+    container.append(countryName)
+
+    
+    target.append(container);
+}
+
+createCityDropdown(cities);
+
+
+
+const selectedCity = localStorage.getItem('selectedCity');
 
 function renderForcastDay(item){
 
@@ -116,5 +192,18 @@ getForecast(cities[selectedCity].name).then(data => {
               if((index +1) % 8 === 0) return item;
      })
      }).then(result => result.map(item => renderForcastDay(item)))
-    }
    
+
+
+
+
+
+    
+    let selectedCityElement = document.getElementById(selectedCity)
+    if(selectedCityElement){
+        selectedCityElement.selected = true
+        renderSelectedCity(selectedCity);
+    } 
+} else {
+    console.log('...simple flow');
+}
