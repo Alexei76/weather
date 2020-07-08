@@ -56,7 +56,7 @@ function renderCityInfoBox(data) {
     container.classList.add('city-info-box');
 
     const cityName = document.createElement('h1');
-    cityName.innerText = `${name}: ${Math.round(parseFloat(main.temp))}`;
+    cityName.innerText = `${name}`;
 
     const celsius = document.createElement('span')
     celsius.innerHTML = '&#x2103;'
