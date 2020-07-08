@@ -13,7 +13,7 @@ function renderSelectedCity(cityKey) {
 
 function createCityDropdown(cities) {
     let select = document.createElement('select');
-    let target = document.querySelector('.locations');
+    let target = document.querySelector('.locations2');
     select.setAttribute('name', 'city-selector');
     select.setAttribute('id', 'city-selector');
     select.setAttribute('class', 'locations__select');
@@ -36,7 +36,7 @@ function createCityDropdown(cities) {
         localStorage.setItem('selectedCity', cityKey);
        
     })
-    target.append(select);
+    //target.append(select);
 }
 
 
@@ -50,7 +50,7 @@ function renderCityInfoBox(data) {
   
 
    
-    let target = document.querySelector('.locations');
+    let target = document.querySelector('.locations2');
 
     const container = document.createElement('div');
     container.classList.add('city-info-box');
