@@ -87,7 +87,7 @@ position: relative;
     left: 0;
 }
 
-.forecastcontainer{display:flex;width:100%;min-height:15%;padding:5%;}
+.forecastcontainer{display:flex;width:100%;min-height:15%;padding:5%;top:35%;position:relative;}
 .forecast-info{text-align: center;
     
     border: 1px solid grey;
@@ -132,7 +132,7 @@ footer {position:absolute;width:100%;bottom:0;
 }
 .city-info-box2 {text-align:center;
   position: absolute;
-  top: 5%;
+  top: 8%;
 color: #282327;
  font-size: 1.3em;
 line-height: 2em;
