@@ -52,14 +52,17 @@ function renderCityInfoBox(data) {
    
     let target = document.querySelector('.locations1');
 
-    
+    const container = document.createElement('div');
+    container.classList.add('city-info-box');
 
     const cityName = document.createElement('h1');
     cityName.innerText = `${name}`;
 
-   
+    const celsius = document.createElement('span')
+    celsius.innerHTML = '&#x2103;'
 
- 
+    const countryName = document.createElement('div');
+    countryName.innerText = `${sys.country}`;
 
    
 
