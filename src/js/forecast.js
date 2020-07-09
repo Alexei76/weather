@@ -13,7 +13,7 @@ function renderSelectedCity(cityKey) {
 
 function createCityDropdown(cities) {
     let select = document.createElement('select');
-    let target = document.querySelector('.locations');
+    let target = document.querySelector('.locations1');
     select.setAttribute('name', 'city-selector');
     select.setAttribute('id', 'city-selector');
     select.setAttribute('class', 'locations__select');
@@ -50,19 +50,16 @@ function renderCityInfoBox(data) {
   
 
    
-    let target = document.querySelector('.locations');
+    let target = document.querySelector('.locations1');
 
-    const container = document.createElement('div');
-    container.classList.add('city-info-box');
+    
 
     const cityName = document.createElement('h1');
     cityName.innerText = `${name}`;
 
-    const celsius = document.createElement('span')
-    celsius.innerHTML = '&#x2103;'
+   
 
-    const countryName = document.createElement('div');
-    countryName.innerText = `${sys.country}`;
+ 
 
    
 
