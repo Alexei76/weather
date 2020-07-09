@@ -36,7 +36,7 @@ function createCityDropdown(cities) {
         localStorage.setItem('selectedCity', cityKey);
        
     })
-    target.append();
+    target.append(select);
 }
 
 
