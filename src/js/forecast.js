@@ -53,7 +53,7 @@ function renderCityInfoBox(data) {
     let target = document.querySelector('.locations1');
 
     const container = document.createElement('div');
-    container.classList.add('city-info-box');
+    container.classList.add('city-info-box2');
 
     const cityName = document.createElement('h1');
     cityName.innerText = `${name}`;
