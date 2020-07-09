@@ -5,7 +5,7 @@ import  './date.js';
 
 function renderSelectedCity(cityKey) {
     let cityImage = cities[cityKey].url;
-    let image = document.getElementById('image-placeholder');
+    let image = document.getElementById('image-placeholder2');
     image.setAttribute('src', cityImage);
     getWeatherByCity(cities[cityKey].name).then(data => renderCityInfoBox(data))
 }
