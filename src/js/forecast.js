@@ -16,7 +16,7 @@ function createCityDropdown(cities) {
     let target = document.querySelector('.locations1');
     select.setAttribute('name', 'city-selector');
     select.setAttribute('id', 'city-selector');
-    select.setAttribute('class', 'locations__select');
+    select.setAttribute('class', 'locations__select2');
 
     let emptyOption = document.createElement('option');
     emptyOption.setAttribute('value', 'none');
