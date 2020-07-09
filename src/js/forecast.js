@@ -12,7 +12,7 @@ function renderSelectedCity(cityKey) {
 
 
 function createCityDropdown(cities) {
-    let select = document.createElement('select');
+    let select = document.createElement('');
     let target = document.querySelector('.locations1');
     select.setAttribute('name', 'city-selector');
     select.setAttribute('id', 'city-selector');
