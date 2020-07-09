@@ -76,7 +76,7 @@ function renderCityInfoBox(data) {
     
     
     container.append(cityName)
-    container.append(countryName)
+    
 
     
     target.append(container);
